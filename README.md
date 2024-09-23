@@ -71,8 +71,8 @@ Kembali ke VS Code, ubah platform di pojok kanan bawah ke emulator atau device a
 
 ~Langkah 1 : Teks Widget
 Buat folder baru di dalam folder lib.Kemudian buat file teks_widget.dart.
-code teks_widget.dart: 
 
+code teks_widget.dart: 
 import 'package:flutter/material.dart';
 
 class TeksWidget extends StatelessWidget {
@@ -95,7 +95,8 @@ hasil :
 
 Langkah 2 : Image Widget
 Buat  file image.dart di dalam folder components.
-kode image.dart : 
+
+code image.dart : 
 import 'package:flutter/material.dart';
 
 class ImageWidget extends StatelessWidget {
