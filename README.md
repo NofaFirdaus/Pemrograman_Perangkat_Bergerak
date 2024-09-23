@@ -88,7 +88,11 @@ Kembali ke VS Code, ubah platform di pojok kanan bawah ke emulator atau device a
 ~Langkah 1 : Teks Widget
 Buat folder baru di dalam folder lib.Kemudian buat file teks_widget.dart.
 
-code teks_widget.dart: 
+code : 
+
+[teks_widget.dart](lib/components/teks.dart)
+
+```dart
 import 'package:flutter/material.dart';
 
 class TeksWidget extends StatelessWidget {
@@ -104,7 +108,7 @@ class TeksWidget extends StatelessWidget {
     ),);
   }
 }
-
+```
 Lalu lakukan import file ke file main.dart
 hasil : 
 
@@ -113,7 +117,12 @@ hasil :
 Langkah 2 : Image Widget
 Buat  file image.dart di dalam folder components.
 
-code image.dart : 
+
+code  : 
+
+[image.dart](lib/components/image.dart)
+
+```dart
 import 'package:flutter/material.dart';
 
 class ImageWidget extends StatelessWidget {
@@ -126,6 +135,8 @@ class ImageWidget extends StatelessWidget {
     );
   }
 }
+```
+
 
 Lakukan penyesuaian asset pada file pubspec.yaml dan tambahkan file logo Anda di folder assets project.
 
@@ -141,9 +152,39 @@ Hasil :
 Buat file Loading_cupertino.dart.
 
 code : 
-![alt text](lib/components/fab.dart)
+
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+[loading_cupertino.dart](lib/components/loading_cupertino.dart)
+
+```dart
+class LoadingWidget extends StatelessWidget {
+  const LoadingWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+return MaterialApp(
+   debugShowCheckedModeBanner: false,   
+      home: Container(
+        margin: const EdgeInsets.only(top: 30),
+        color: Colors.black,
+        child: Column(
+          children: <Widget>[
+            CupertinoButton(
+              child: const Text("Hello World",style: TextStyle(color: Colors.white),),
+              onPressed: () {},
+            ),
+            const CupertinoActivityIndicator(color: Colors.white,),
+          ],
+        ),
+      ),
+    );  }
+}
+```
 
 Hasil :
+
 ![alt text](image-19.png)
 
 ~Langkah 2: Floating Action Button (FAB)
@@ -152,9 +193,30 @@ Buat file fab.dart.
 
 code :
 
-![alt text](lib/components/fab.dart)
+[fab.dart](lib/components/fab.dart)
 
+```dart
+import 'package:flutter/material.dart';
 
+class FabWidget extends StatelessWidget {
+  const FabWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // Add your onPressed code here!
+          },
+          backgroundColor: Colors.pink,
+          child: const Icon(Icons.thumb_up),
+        ),
+      ),
+    );
+  }
+}
+```
 
 hasil : 
 
@@ -163,7 +225,4 @@ hasil :
 
 ~Langkah 3
 
-Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
-code :
-
-![alt text](lib/main.dart)
+code : 
