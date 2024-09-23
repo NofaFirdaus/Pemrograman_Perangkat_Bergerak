@@ -1,4 +1,6 @@
+import 'package:coba_flutter_1/components/fab.dart';
 import 'package:coba_flutter_1/components/image.dart';
+import 'package:coba_flutter_1/components/loading_cupertino.dart';
 import 'package:flutter/material.dart';
 import 'components/teks.dart';
 
@@ -120,8 +122,9 @@ class _MyHomePageState extends State<MyHomePage> {
             // wireframe for each widget.
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const TeksWidget(),
-              const ImageWidget()
+              // const TeksWidget(),
+              // const ImageWidget()
+              // LoadingWidget()
               // const Text(
               //   'You have pushed the button this many times:',
               // ),
@@ -135,16 +138,19 @@ class _MyHomePageState extends State<MyHomePage> {
         floatingActionButton: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            FloatingActionButton(
-              onPressed: _decrementCounter,
-              tooltip: 'Decrement',
-              child: const Icon(Icons.remove),
-            ),
-            FloatingActionButton(
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: const Icon(Icons.add),
-            ),
+                          FabWidget()
+
+            // FloatingActionButton(
+            //   onPressed: _decrementCounter,
+            //   tooltip: 'Decrement',
+            //   child: const Icon(Icons.remove),
+            // ),
+            // SizedBox(width: 20,),
+            // FloatingActionButton(
+            //   onPressed: _incrementCounter,
+            //   tooltip: 'Increment',
+            //   child: const Icon(Icons.add),
+            // ),
           ],
         ) // This trailing comma makes auto-formatting nicer for build methods.
         );
